@@ -1,2 +1,16 @@
 # imcrypt
-image encryption cli tool, supports encryption/decryption through AES, one time pad, Arnold's cat map and also allows hiding of text through LSB steganography
+image encryption cli tool, supports the following operations
+
+AES encrytion/decryption 
+
+
+Encryption/decryption using Arnold's cat map
+
+
+Encryption/decryption using one time pad
+
+
+LSB steganography
+
+
+
