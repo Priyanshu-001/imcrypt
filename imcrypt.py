@@ -342,13 +342,13 @@ if __name__ == '__main__':
 
 	elif args.mode == 'aes_en':
 		image=read_image(args.image)
-		encrypted_image = aes_en(image,args.key)
+		encrypted_image = aes_en(image,args.password)
 		name = safeSave(encrypted_image, args.image,'yes')
 		print(f'saved image as {name}')
 
 	elif args.mode == 'aes_de':
 		image = read_image(args.image)
-		decrypted_image = aes_de(image,args.key)
+		decrypted_image = aes_de(image,args.password)
 		name = safeSave(decrypted_image,args.image,'yes')
 		print(f'saved image as {name}')
 
