@@ -85,3 +85,20 @@ python imcrypt.py 1time_pad_en --image amg.png
 python imcrypt.py 1time_pad_de -i amg.png -k key-amg.png
 ```
 ![amg](https://user-images.githubusercontent.com/26710303/184950002-b9441829-cadd-4f51-a44d-39a093867ccb.png)
+
+### AES
+#### Orignal
+![lab](https://user-images.githubusercontent.com/26710303/184951940-94cf3847-2c4e-4723-8d5c-f6aec7e3ec69.png)
+#### Encrypted
+```
+python imcrypt.py aes_en -i lab.png -p "woof woof"
+```
+![lab](https://user-images.githubusercontent.com/26710303/184952210-edfae96f-d7cd-40e1-b14c-83ff4aff347d.png)
+
+#### Decrypted
+```
+python imcrypt.py aes_de -i lab.png -p "woof woof"
+```
+![lab](https://user-images.githubusercontent.com/26710303/184952557-f68bb064-a6fc-4f84-8d38-e209060bfc1f.png)
+
+
