@@ -70,3 +70,35 @@ python imcrypt.py arnold_cat_de --image Arnold_cat.png -k 37
 ```
 ![Arnold_cat](https://user-images.githubusercontent.com/26710303/184946479-6595db0c-af19-457a-be02-7dc1ecfbfe98.png)
 
+### One time Pad
+#### Orignal
+```
+python imcrypt.py 1time_pad_en --image amg.png
+```
+![amg](https://user-images.githubusercontent.com/26710303/184948449-89ab8513-478d-4a66-81f5-6ce563eb69b5.png)
+#### Encrypted key & image(doesn't matter what is consider image or key as xor is communatative op)
+![amg](https://user-images.githubusercontent.com/26710303/184949359-674ff2f7-04d2-4493-bd3c-d705be3fedcd.png)
+![key-amg](https://user-images.githubusercontent.com/26710303/184949522-3677e8ea-767c-4da6-bba0-8ef059ffff33.png)
+
+#### Decryted
+```
+python imcrypt.py 1time_pad_de -i amg.png -k key-amg.png
+```
+![amg](https://user-images.githubusercontent.com/26710303/184950002-b9441829-cadd-4f51-a44d-39a093867ccb.png)
+
+### AES
+#### Orignal
+![lab](https://user-images.githubusercontent.com/26710303/184951940-94cf3847-2c4e-4723-8d5c-f6aec7e3ec69.png)
+#### Encrypted
+```
+python imcrypt.py aes_en -i lab.png -p "woof woof"
+```
+![lab](https://user-images.githubusercontent.com/26710303/184952210-edfae96f-d7cd-40e1-b14c-83ff4aff347d.png)
+
+#### Decrypted
+```
+python imcrypt.py aes_de -i lab.png -p "woof woof"
+```
+![lab](https://user-images.githubusercontent.com/26710303/184952557-f68bb064-a6fc-4f84-8d38-e209060bfc1f.png)
+
+
