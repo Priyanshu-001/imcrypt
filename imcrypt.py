@@ -94,8 +94,7 @@ def aes_en(img,key):
 	key= bytes(key, 'utf-8')
 	key=kdf.derive(key)
 	cipher = AES.new(key, AES.MODE_CFB,IV=iv)
-	img = cipher.encrypt(img)
-	print(len(img))
+	img = cipher.encrypt(img.tobytes())
 	img = np.frombuffer(img,np.uint8)
 	print(len(img))
 	img=img.reshape(img_shape)
@@ -119,10 +118,8 @@ def aes_de(img,key):
 	key= bytes(key, 'utf-8')
 	key=kdf.derive(key)
 	cipher = AES.new(key, AES.MODE_CFB,IV=iv)
-	img = cipher.decrypt(img)
-	print(len(img))
+	img = cipher.decrypt(img.tobytes())
 	img = np.frombuffer(img,np.uint8)
-	print(len(img))
 	img=img.reshape(img_shape)
 	return img
 
