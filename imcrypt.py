@@ -288,12 +288,6 @@ def decry(img=None,key=None):
 		raise e
 	else:
 		return decrypted_img
-usage: imcrypt.py [-h] --image IMAGE [--message MESSAGE] [--key KEY]
-                  [--password PASSWORD]
-                  {1time_pad_en,1time_pad_de,arnold_cat,arnold_cat_de,aes_en,aes_de,stegsno_write,stegano_read}
-
-	
-	
 
 if __name__ == '__main__':
 
