@@ -70,3 +70,18 @@ python imcrypt.py arnold_cat_de --image Arnold_cat.png -k 37
 ```
 ![Arnold_cat](https://user-images.githubusercontent.com/26710303/184946479-6595db0c-af19-457a-be02-7dc1ecfbfe98.png)
 
+### One time Pad
+#### Orignal
+```
+python imcrypt.py 1time_pad_en --image amg.png
+```
+![amg](https://user-images.githubusercontent.com/26710303/184948449-89ab8513-478d-4a66-81f5-6ce563eb69b5.png)
+#### Encrypted key & image(doesn't matter what is consider image or key as xor is communatative op)
+![amg](https://user-images.githubusercontent.com/26710303/184949359-674ff2f7-04d2-4493-bd3c-d705be3fedcd.png)
+![key-amg](https://user-images.githubusercontent.com/26710303/184949522-3677e8ea-767c-4da6-bba0-8ef059ffff33.png)
+
+#### Decryted
+```
+python imcrypt.py 1time_pad_de -i amg.png -k key-amg.png
+```
+![amg](https://user-images.githubusercontent.com/26710303/184950002-b9441829-cadd-4f51-a44d-39a093867ccb.png)
