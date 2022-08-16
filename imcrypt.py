@@ -325,7 +325,7 @@ if __name__ == '__main__':
 		
 		for k in range(key): 
 			image=arnold_cat_en(image)
-		name = safeSave(image,imagename,'yes')
+		name = safeSave(image,imgname,'yes')
 		print(f'saved image as {name}')
 
 	elif args.mode == 'arnold_cat_de':
@@ -334,7 +334,7 @@ if __name__ == '__main__':
 		image=read_image(imgname)
 		for k in range(key):
 			image=arnold_cat_de(image)
-		name = safeSave(image,imagename,'yes')
+		name = safeSave(image,imgname,'yes')
 		print(f'saved image as {name}')
 
 	elif args.mode == 'aes_en':
