@@ -1,4 +1,5 @@
 # imcrypt
+
 image encryption cli tool, supports the following operations
 
 AES encrytion/decryption 
@@ -11,7 +12,10 @@ Encryption/decryption using one time pad
 
 
 LSB steganography
+## Installation
+Recommended to set up a venv first
 
+    pip install -r requirements.txt
 
 ## USAGE
 
@@ -101,4 +105,22 @@ python imcrypt.py aes_de -i lab.png -p "woof woof"
 ```
 ![lab](https://user-images.githubusercontent.com/26710303/184952557-f68bb064-a6fc-4f84-8d38-e209060bfc1f.png)
 
+## LSB Stegano with delimiter
+### Write
+![car.png](https://user-images.githubusercontent.com/26710303/184948449-89ab8513-478d-4a66-81f5-6ce563eb69b5.png)
+
+```
+python imcrypt.py stegano_write -i car.png -m "Hello everyone !!"
+```
+### Read 
+![car](https://user-images.githubusercontent.com/26710303/206098737-123ad5b4-3166-4ef8-8323-9eaeeb7529ce.png)
+
+*Image with message encoded.*
+```
+
+python imcrypt.py stegano_read -i car.png
+> Hello everyone !!
+```
+
+* Download any image and try decrypted them to see the result *
 
