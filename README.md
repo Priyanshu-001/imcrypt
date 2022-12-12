@@ -42,7 +42,7 @@ MODE can be any one of these {1time_pad_en,1time_pad_de,arnold_cat,arnold_cat_de
 
 
 
-## MODES
+## CLI MODES
 
 
 **1time_pad_en,1time_pad_de** - Generates a randomly generated key and performs xor with the orginal image to create encrypted image, the key and the encrypted image both are required for decryption
@@ -124,3 +124,21 @@ python imcrypt.py stegano_read -i car.png
 
 * Download any image and try decrypted them to see the result *
 
+
+## Using the engine class
+for other apps that may use image encryption but don't want to use CLI the engine class provides an easy interface to do so. Where methods of i/o may be different. Eg flask backend, tkinter GUI
+### Example use
+```
+engine = Engine()
+engine.setImgRead(read_image).setImgWrite(save_img).setLogger(loggingFun)
+engine.loadStratergy(stratergy).exe(operation,**kwargs)
+```
+Here stratergy can be
+1. ArnoldCat,
+2. OneTimePad,
+3. AES
+4. Stegano
+
+operation can be 
+1. encrypt
+2. decrypt
